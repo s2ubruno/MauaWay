@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#214d40" />
+    <meta
+      name="description"
+      content="Descubra restaurantes de Mauá, organize seus lugares e compartilhe suas experiências."
+    />
+    <title>Entre para descobrir | MauáWay</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/store.js"></script>
+    <script defer src="assets/js/ui.js"></script>
+    <script defer src="assets/js/auth.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Pular para o conteúdo</a>
+    <header id="header"></header>
+    <main id="main" class="auth-layout container">
+      <section class="auth-story">
+        <div class="eyebrow">SUA CIDADE TEM MUITO MAIS</div>
+        <h1>Todo lugar<br />conta uma<br /><em>história.</em></h1>
+        <p>Comece a sua em Mauá.</p>
+        <div class="mini-shelf">
+          <img
+            src="assets/img/recanto.svg"
+            alt="Ilustração de hambúrguer"
+          /><img
+            src="assets/img/fornalenha.svg"
+            alt="Ilustração de pizza"
+          /><img src="assets/img/konkai.svg" alt="Ilustração de sushi" />
+        </div>
+        <p>Uma estante só sua, cheia de próximas descobertas.</p>
+      </section>
+      <section class="auth-card">
+        <div class="tabs" role="tablist" aria-label="Acesso">
+          <button id="login-tab" role="tab" aria-selected="true">Entrar</button
+          ><button
+            id="signup-tab"
+            role="tab"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Criar conta
+          </button>
+        </div>
+        <h2 id="auth-title">Bom ter você por aqui.</h2>
+        <p id="auth-subtitle">Entre para organizar seus lugares favoritos.</p>
+        <form id="auth-form">
+          <label id="name-field" hidden
+            >Seu nome<input
+              name="name"
+              autocomplete="name"
+              minlength="2"
+              maxlength="40" /></label
+          ><label
+            >E-mail<input
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              maxlength="120"
+              placeholder="voce@exemplo.com" /></label
+          ><label
+            >Senha<span class="password-field"
+              ><input
+                name="password"
+                id="password"
+                type="password"
+                required
+                minlength="6"
+                maxlength="128"
+                autocomplete="current-password"
+                placeholder="Pelo menos 6 caracteres"
+              /><button
+                id="toggle-password"
+                type="button"
+                aria-label="Mostrar senha"
+              >
+                Ver
+              </button></span
+            ></label
+          >
+          <p class="form-error" id="auth-error" role="alert"></p>
+          <button id="auth-submit" class="button full" type="submit">
+            Entrar →
+          </button>
+        </form>
+        <div class="divider">ou conheça primeiro</div>
+        <button class="button secondary full" id="demo">
+          Explorar com perfil de demonstração
+        </button>
+        <p class="local-notice">
+          Projeto acadêmico executado localmente pelo Laragon. Use dados fictícios e uma senha exclusiva para esta demonstração.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="index.html">mauá<span>way</span><i>↗</i></a>
+      <p>Sua próxima descoberta está aqui.</p>
+      <small
+        >Projeto acadêmico · Técnico em Desenvolvimento de Sistemas<br />Contas, favoritos e avaliações salvos no banco de dados do projeto.</small
+      ><a href="sobre.html">Sobre o projeto e fontes ↗</a>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#214d40" />
+    <meta
+      name="description"
+      content="Descubra restaurantes de Mauá, organize seus lugares e compartilhe suas experiências."
+    />
+    <title>Descubra sua cidade | MauáWay</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/store.js"></script>
+    <script defer src="assets/js/ui.js"></script>
+    <script defer src="assets/js/explore.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Pular para o conteúdo</a>
+    <header id="header"></header>
+    <main id="main" class="container">
+      <section class="intro">
+        <div>
+          <div class="eyebrow">FEITO PARA QUEM VIVE MAUÁ</div>
+          <h1>Bons lugares.<br /><em>Perto de você.</em></h1>
+          <p>
+            Descubra sabores, guarde seus favoritos e monte<br
+              class="desktop"
+            />
+            sua própria estante de lugares.
+          </p>
+        </div>
+        <div class="city-art" aria-hidden="true">
+          <span class="orbit">SUA CIDADE, NOVOS CAMINHOS</span>
+          <div class="pin">m<span>↗</span></div>
+          <div class="art-label">Mauá, SP <span>●</span></div>
+        </div>
+      </section>
+      <section aria-labelledby="explore-title">
+        <div class="search-box">
+          <span aria-hidden="true">⌕</span
+          ><input
+            id="search"
+            type="search"
+            aria-label="Pesquisar lugares"
+            placeholder="O que você quer descobrir? Tente hambúrguer, sushi, pizza…"
+          /><kbd aria-hidden="true">/</kbd>
+        </div>
+        <div class="filter-row" id="categories" aria-label="Categorias"></div>
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">EXPLORE A CIDADE</div>
+            <h2 id="explore-title">Seu próximo lugar favorito</h2>
+            <p id="result-count" role="status"></p>
+          </div>
+          <label class="sort-label"
+            >Ordenar por<select id="sort">
+              <option value="featured">Descobertas</option>
+              <option value="name">Nome: A–Z</option>
+              <option value="rating">Melhor avaliação local</option>
+            </select></label
+          >
+        </div>
+        <div id="places" class="grid"></div>
+      </section>
+      <aside class="bottom-note">
+        <span>↗</span>
+        <div>
+          <h3>Uma cidade. Muitas descobertas.</h3>
+          <p>
+            Marque onde quer ir, registre suas visitas e encontre tudo no seu
+            perfil.
+          </p>
+        </div>
+        <a class="button light" href="perfil.html">Minha estante →</a>
+      </aside>
+    </main>
+    <footer>
+      <a class="brand" href="index.html">mauá<span>way</span><i>↗</i></a>
+      <p>Sua próxima descoberta está aqui.</p>
+      <small
+        >Projeto acadêmico · Técnico em Desenvolvimento de Sistemas<br />Contas, favoritos e avaliações salvos no banco de dados do projeto.</small
+      ><a href="sobre.html">Sobre o projeto e fontes ↗</a>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#214d40" />
+    <meta
+      name="description"
+      content="Descubra restaurantes de Mauá, organize seus lugares e compartilhe suas experiências."
+    />
+    <title>Minha estante | MauáWay</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/store.js"></script>
+    <script defer src="assets/js/ui.js"></script>
+    <script defer src="assets/js/profile.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Pular para o conteúdo</a>
+    <header id="header"></header>
+    <main id="main" class="container">
+      <section id="profile-head" class="profile-head"></section>
+      <section id="profile-content" hidden>
+        <div
+          id="profile-tabs"
+          class="tabs"
+          role="tablist"
+          aria-label="Minhas coleções"
+        ></div>
+        <div class="section-heading">
+          <div>
+            <h2 id="collection-title">Todos os lugares</h2>
+            <p id="collection-count"></p>
+          </div>
+          <a href="index.html" class="text-link">Descobrir lugares ↗</a>
+        </div>
+        <div id="collection" class="grid" role="tabpanel"></div>
+      </section>
+      <dialog id="edit-profile">
+        <form id="profile-form">
+          <div class="dialog-heading">
+            <h2>Seu perfil</h2>
+            <button
+              type="button"
+              class="icon-button"
+              id="close-profile"
+              aria-label="Fechar"
+            >
+              ×
+            </button>
+          </div>
+          <label
+            >Nome<input
+              name="name"
+              required
+              minlength="2"
+              maxlength="40" /></label
+          ><label
+            >Sobre você<textarea
+              name="bio"
+              maxlength="180"
+              placeholder="Quais sabores você gosta de descobrir?"
+            ></textarea></label
+          ><button class="button" type="submit">Salvar alterações</button>
+        </form>
+      </dialog>
+    </main>
+    <footer>
+      <a class="brand" href="index.html">mauá<span>way</span><i>↗</i></a>
+      <p>Sua próxima descoberta está aqui.</p>
+      <small
+        >Projeto acadêmico · Técnico em Desenvolvimento de Sistemas<br />Contas, favoritos e avaliações salvos no banco de dados do projeto.</small
+      ><a href="sobre.html">Sobre o projeto e fontes ↗</a>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
